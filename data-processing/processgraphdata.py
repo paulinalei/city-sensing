@@ -8,6 +8,9 @@ import re
 nodearray = []
 sandylinkarray = []
 nyclinkarray = []
+njlinkarray = []
+sandypetslinkarray = []
+frankenstormlinkarray = []
 with open("hurricanesandy.csv", errors="ignore") as datafile:
     csvreader = csv.reader(datafile, delimiter=",")
     linecount = 0
@@ -23,20 +26,48 @@ with open("hurricanesandy.csv", errors="ignore") as datafile:
             "level": 0
         })
 
+        strength = 0.5
+        if linecount % 2 == 0:
+            strength = 0.7
+        if linecount % 3 == 0:
+            strength = 0.8
+
         if "#sandy" in tweet:
             sandylinkarray.append({
                 "target": "sandy",
                 "source": row[11],
-                "strength": 0.7
+                "strength": strength
             })
         
         if "#nyc" in tweet:
             nyclinkarray.append({
                 "target": "nyc",
                 "source": row[11],
-                "strength": 0.7
+                "strength": strength
+            })
+        
+        if "#nj" in tweet:
+            njlinkarray.append({
+                "target": "nj",
+                "source": row[11],
+                "strength": strength
             })
 
-print(nyclinkarray)
+        if "#sandypets" in tweet:
+            sandypetslinkarray.append({
+                "target": "sandypets",
+                "source": row[11],
+                "strength": strength
+            })
+        
+        if "#frankenstorm" in tweet:
+            frankenstormlinkarray.append({
+                "target": "frankenstorm",
+                "source": row[11],
+                "strength": strength
+            })
+
+        linecount += 1
+print(frankenstormlinkarray)
             
         

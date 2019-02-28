@@ -1,6 +1,9 @@
 var nodes = [
     {'id': 'sandy', group: 0, label: '#Sandy', level: 1},
     {'id': 'nyc', group: 0, label: '#NYC', level: 1},
+    {'id': 'nj', group: 0, label: '#NJ', level: 1},
+    {'id': 'sandypets', group: 0, label: '#SandyPets', level: 1},
+    {'id': 'frankenstorm', group: 0, label: '#FrankenStorm', level: 1},
     {
         'id': 'breakingstorm',
         'group': 0,
@@ -754,517 +757,138 @@ var nodes = [
 ]
 
 var links = [
-    {
-      'target': 'sandy',
-      'source': 'satantoine',
-      'strength': 0.8
-    },
-    {
-      'target': 'sandy',
-      'source': 'MattJohnstonTV',
-      'strength': 0.9
-    },
-    {
-      'target': 'sandy',
-      'source': 'mocha_93',
-      'strength': 0.5
-    },
-    {
-      'target': 'sandy',
-      'source': 'feverplay_xo',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'cubedreamer',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'fdilella',
-      'strength': 0.5
-    },
-    {
-      'target': 'sandy',
-      'source': 'KCMichelle',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Stevie_Bo',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'PaulBell55',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'CarolHelf',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'lauritacruz47',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'camai_',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'MikeBeam',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'RxResponse',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'adri16',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'MarketWatch',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Sorcha_Ellie',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'SupermanHotMale',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'StephTweet',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'DanTRusu',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Shirlz1123',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'sncyf',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'philcloh2o',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'jmgreenwell',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'BuniYani',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'saraha64',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'commoncentsmom',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'nathancreitz',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'ksrgatorfn',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'rumsoncds',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'EMaloneG',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'PoppenReport',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'katew',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'dingbat',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'faiza_n_ali',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'MichelleRafter',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Nelmcadoo',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Daneeo1985',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'longfellow520',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'HotmaMejia',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'jmbelcher',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'HeiddiZ',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Jsurvivor_nyc',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'DanaGalColeman',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'biasia',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'nycTrend',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': '_LetsFlyAway_',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'JahEmpress',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'MadameRamotswe',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Halled',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'wlynnae',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'markustedeschii',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Marketa1981',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'shaunrandol',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'kerstinshamberg',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'celestemc',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'coastalvegan',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'BuzzFeed',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'JasminGranado',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'annemaccat',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'MyFoxNY',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'CirocBoyNick',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'beball',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'alj770',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'jimmbboe',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'vickyXlee',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'beachhomesnj',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'meggy009',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'DITZABELLA',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Kenosen2',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'HealthcareWen',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'attynyc212',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'DNAinfo',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'JusAire',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'luisdessommes',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'DareIBuild',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'johndavisonx',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Cholosocksgirl',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'BiscardiA',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'SKSMediaCanada',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'SallyMos',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'MarcClimaco',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'wyattgallery',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'asrulsidiq',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Global_Montreal',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'PiedmontHousing',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'DNDailyPolitics',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'Cubfnatic',
-      'strength': 0.7
-    },
-    {
-      'target': 'sandy',
-      'source': 'KelleyChubb',
-      'strength': 0.7
-    }
-  ]
+  {'target': 'sandy', 'source': 'satantoine', 'strength': 0.7}, {'target': 'sandy', 'source': 'MattJohnstonTV', 'strength': 0.5}, {'target': 'sandy', 'source': 'mocha_93', 'strength': 0.5}, {'target': 'sandy', 'source': 'feverplay_xo', 'strength': 0.7}, {'target': 'sandy', 'source': 'cubedreamer', 'strength': 0.8}, {'target': 'sandy', 'source': 'fdilella', 'strength': 0.7}, {'target': 'sandy', 'source': 'KCMichelle', 'strength': 0.5}, {'target': 'sandy', 'source': 'Stevie_Bo', 'strength': 0.5}, {'target': 'sandy', 'source': 'PaulBell55', 'strength': 0.7}, {'target': 'sandy', 'source': 'CarolHelf', 'strength': 0.8}, {'target': 'sandy', 'source': 'lauritacruz47', 'strength': 0.7}, {'target': 'sandy', 'source': 'camai_', 'strength': 0.5}, {'target': 'sandy', 'source': 'MikeBeam', 'strength': 0.8}, {'target': 'sandy', 'source': 'RxResponse', 'strength': 0.7}, {'target': 'sandy', 'source': 'adri16', 'strength': 0.7}, {'target': 'sandy', 'source': 'MarketWatch', 'strength': 0.5}, {'target': 'sandy', 'source': 'Sorcha_Ellie', 'strength': 0.8}, {'target': 'sandy', 'source': 'SupermanHotMale', 'strength': 0.5}, {'target': 'sandy', 'source': 'StephTweet', 'strength': 0.7}, {'target': 'sandy', 'source': 'DanTRusu', 'strength': 0.8}, {'target': 'sandy', 'source': 'Shirlz1123', 'strength': 0.7}, {'target': 'sandy', 'source': 'sncyf', 'strength': 0.5}, {'target': 'sandy', 'source': 'philcloh2o', 'strength': 0.8}, {'target': 'sandy', 'source': 'jmgreenwell', 'strength': 0.5}, {'target': 'sandy', 'source': 'BuniYani', 'strength': 0.7}, {'target': 'sandy', 'source': 'saraha64', 'strength': 0.8}, {'target': 'sandy', 'source': 'commoncentsmom', 'strength': 0.7}, {'target': 'sandy', 'source': 'nathancreitz', 'strength': 0.5}, {'target': 'sandy', 'source': 'ksrgatorfn', 'strength': 0.8}, {'target': 'sandy', 'source': 'rumsoncds', 'strength': 0.7}, {'target': 'sandy', 'source': 'EMaloneG', 'strength': 0.5}, {'target': 'sandy', 'source': 'PoppenReport', 'strength': 0.8}, {'target': 'sandy', 'source': 'katew', 'strength': 0.5}, {'target': 'sandy', 'source': 'dingbat', 'strength': 0.7}, {'target': 'sandy', 'source': 'faiza_n_ali', 'strength': 0.8}, {'target': 'sandy', 'source': 'MichelleRafter', 'strength': 0.5}, {'target': 'sandy', 'source': 'Nelmcadoo', 'strength': 0.7}, {'target': 'sandy', 'source': 'Daneeo1985', 'strength': 0.7}, {'target': 'sandy', 'source': 'longfellow520', 'strength': 0.5}, {'target': 'sandy', 'source': 'HotmaMejia', 'strength': 0.8}, {'target': 'sandy', 'source': 'jmbelcher', 'strength': 0.5}, {'target': 'sandy', 'source': 'HeiddiZ', 'strength': 0.7}, {'target': 'sandy', 'source': 'Jsurvivor_nyc', 'strength': 0.8}, {'target': 'sandy', 'source': 'DanaGalColeman', 'strength': 0.7}, {'target': 'sandy', 'source': 'biasia', 'strength': 0.5}, {'target': 'sandy', 'source': 'nycTrend', 'strength': 0.8}, {'target': 'sandy', 'source': '_LetsFlyAway_', 'strength': 0.7}, {'target': 'sandy', 'source': 'JahEmpress', 'strength': 0.8}, {'target': 'sandy', 'source': 'MadameRamotswe', 'strength': 0.5}, {'target': 'sandy', 'source': 'Halled', 'strength': 0.5}, {'target': 'sandy', 'source': 'wlynnae', 'strength': 0.8}, {'target': 'sandy', 'source': 'markustedeschii', 'strength': 0.7}, {'target': 'sandy', 'source': 'Marketa1981', 'strength': 0.8}, {'target': 'sandy', 'source': 'shaunrandol', 'strength': 0.5}, {'target': 'sandy', 'source': 'kerstinshamberg', 'strength': 0.7}, {'target': 'sandy', 'source': 'celestemc', 'strength': 0.8}, {'target': 'sandy', 'source': 'coastalvegan', 'strength': 0.7}, {'target': 'sandy', 'source': 'BuzzFeed', 'strength': 0.5}, {'target': 'sandy', 'source': 'JasminGranado', 'strength': 0.5}, {'target': 'sandy', 'source': 'annemaccat', 'strength': 0.8}, {'target': 'sandy', 'source': 'MyFoxNY', 'strength': 0.7}, {'target': 'sandy', 'source': 'CirocBoyNick', 'strength': 0.5}, {'target': 'sandy', 'source': 'beball', 'strength': 0.8}, {'target': 'sandy', 'source': 'alj770', 'strength': 0.7}, {'target': 'sandy', 'source': 'jimmbboe', 'strength': 0.5}, {'target': 'sandy', 'source': 'vickyXlee', 'strength': 0.8}, {'target': 'sandy', 'source': 'beachhomesnj', 'strength': 0.5}, {'target': 'sandy', 'source': 'meggy009', 'strength': 0.7}, {'target': 'sandy', 'source': 'DITZABELLA', 'strength': 0.7}, {'target': 'sandy', 'source': 'Kenosen2', 'strength': 0.5}, {'target': 'sandy', 'source': 'HealthcareWen', 'strength': 0.5}, {'target': 'sandy', 'source': 'attynyc212', 'strength': 0.7}, {'target': 'sandy', 'source': 'DNAinfo', 'strength': 0.8}, {'target': 'sandy', 'source': 'JusAire', 'strength': 0.7}, {'target': 'sandy', 'source': 'luisdessommes', 'strength': 0.8}, {'target': 'sandy', 'source': 'DareIBuild', 'strength': 0.5}, {'target': 'sandy', 'source': 'johndavisonx', 'strength': 0.7}, {'target': 'sandy', 'source': 'Cholosocksgirl', 'strength': 0.8}, {'target': 'sandy', 'source': 'BiscardiA', 'strength': 0.7}, {'target': 'sandy', 'source': 'SKSMediaCanada', 'strength': 0.8}, {'target': 'sandy', 'source': 'SallyMos', 'strength': 0.5}, {'target': 'sandy', 'source': 'MarcClimaco', 'strength': 0.8}, {'target': 'sandy', 'source': 'wyattgallery', 'strength': 0.7}, {'target': 'sandy', 'source': 'asrulsidiq', 'strength': 0.8}, {'target': 'sandy', 'source': 'Global_Montreal', 'strength': 0.7}, {'target': 'sandy', 'source': 'PiedmontHousing', 'strength': 0.5}, {'target': 'sandy', 'source': 'DNDailyPolitics', 'strength': 0.5}, {'target': 'sandy', 'source': 'Cubfnatic', 'strength': 0.7}, {'target': 'sandy', 'source': 'KelleyChubb', 'strength': 0.5},
+  {'target': 'nyc', 'source': 'satantoine', 'strength': 0.65}, {'target': 'nyc', 'source': 'adri16', 'strength': 0.85}, {'target': 'nyc', 'source': 'Sorcha_Ellie', 'strength': 0.7}, {'target': 'nyc', 'source': 'philcloh2o', 'strength': 0.75}, {'target': 'nyc', 'source': 'saraha64', 'strength': 0.85}, {'target': 'nyc', 'source': 'EMaloneG', 'strength': 0}, {'target': 'nyc', 'source': 'dingbat', 'strength': 0.85}, {'target': 'nyc', 'source': 'faiza_n_ali', 'strength': 0.7}, {'target': 'nyc', 'source': 'MichelleRafter', 'strength': 0.8}, {'target': 'nyc', 'source': 'Nelmcadoo', 'strength': 0.75}, {'target': 'nyc', 'source': 'HotmaMejia', 'strength': 0.7}, {'target': 'nyc', 'source': 'jmbelcher', 'strength': 0.85}, {'target': 'nyc', 'source': 'HeiddiZ', 'strength': 0.8}, {'target': 'nyc', 'source': 'JahEmpress', 'strength': 0.8}, {'target': 'nyc', 'source': 'MadameRamotswe', 'strength': 0.75}, {'target': 'nyc', 'source': 'wlynnae', 'strength': 0.7}, {'target': 'nyc', 'source': 'shaunrandol', 'strength': 0}, {'target': 'nyc', 'source': 'coastalvegan', 'strength': 0.65}, {'target': 'nyc', 'source': 'JasminGranado', 'strength': 0}, {'target': 'nyc', 'source': 'alj770', 'strength': 0.65}, {'target': 'nyc', 'source': 'DITZABELLA', 'strength': 0.65}, {'target': 'nyc', 'source': 'Kenosen2', 'strength': 0.75}, {'target': 'nyc', 'source': 'DNAinfo', 'strength': 0.85}, {'target': 'nyc', 'source': 'JusAire', 'strength': 0.75}, {'target': 'nyc', 'source': 'luisdessommes', 'strength': 0.7}, {'target': 'nyc', 'source': 'wyattgallery', 'strength': 0.65}, {'target': 'nyc', 'source': 'Global_Montreal', 'strength': 0.65}, {'target': 'nyc', 'source': 'KelleyChubb', 'strength': 0.75},
+  {'target': 'nj', 'source': 'JasminGranado', 'strength': 0.5}, {'target': 'nj', 'source': 'CirocBoyNick', 'strength': 0.5},
+  {'target': 'sandypets', 'source': 'camai_', 'strength': 0.5}, {'target': 'sandypets', 'source': 'Daneeo1985', 'strength': 0.7}, {'target': 'sandypets', 'source': 'biasia', 'strength': 0.5}, {'target': 'sandypets', 'source': 'Marketa1981', 'strength': 0.8}, {'target': 'sandypets', 'source': 'SallyMos', 'strength': 0.5},
+  {'target': 'frankenstorm', 'source': 'RxResponse', 'strength': 0.7}, {'target': 'frankenstorm', 'source': 'EMaloneG', 'strength': 0.5}, {'target': 'frankenstorm', 'source': 'SKSMediaCanada', 'strength': 0.8}
+]
 
-// 
+
 function getNodeColor(node) {
     return node.level === 1 ? 'red' : 'gray'
 }
 
-var width = 960;
-var height = 500;
+// var width = 960;
+// var height = 580;
 
-// var width = window.innerWidth
-// var height = window.innerHeight
+function getNeighbors(node) {
+  return links.reduce(function (neighbors, link) {
+      if (link.target.id === node.id) {
+        neighbors.push(link.source.id)
+      } else if (link.source.id === node.id) {
+        neighbors.push(link.target.id)
+      }
+      return neighbors
+    },
+    [node.id]
+  )
+}
+
+function isNeighborLink(node, link) {
+  return link.target.id === node.id || link.source.id === node.id
+}
+
+
+function getNodeColor(node, neighbors) {
+  if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
+    return node.level === 1 ? 'blue' : 'green'
+  }
+
+  return node.level === 1 ? 'red' : 'gray'
+}
+
+
+function getLinkColor(node, link) {
+  return isNeighborLink(node, link) ? 'green' : '#e5e5e5'
+}
+
+function getTextColor(node, neighbors) {
+  return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1 ? 'green' : 'black'
+}
+
+var width = window.innerWidth
+var height = window.innerHeight
 
 var svg = d3.select('svg')
 svg.attr('width', width).attr('height', height)
 
 // simulation setup with all forces
 var linkForce = d3
-    .forceLink()
-    .id(function (link) { return link.id })
-    .strength(function (link) { return link.strength })
+  .forceLink()
+  .id(function (link) { return link.id })
+  .strength(function (link) { return link.strength })
 
 var simulation = d3
-    .forceSimulation()
-    .force('link', linkForce)
-    .force('charge', d3.forceManyBody().strength(-120))
-    .force('center', d3.forceCenter(width / 2, height / 2))
+  .forceSimulation()
+  .force('link', linkForce)
+  .force('charge', d3.forceManyBody().strength(-120))
+  .force('center', d3.forceCenter(width / 2, height / 2))
+
+var dragDrop = d3.drag().on('start', function (node) {
+  node.fx = node.x
+  node.fy = node.y
+}).on('drag', function (node) {
+  simulation.alphaTarget(0.7).restart()
+  node.fx = d3.event.x
+  node.fy = d3.event.y
+}).on('end', function (node) {
+  if (!d3.event.active) {
+    simulation.alphaTarget(0)
+  }
+  node.fx = null
+  node.fy = null
+})
+
+function selectNode(selectedNode) {
+  var neighbors = getNeighbors(selectedNode)
+
+  // we modify the styles to highlight selected nodes
+  nodeElements.attr('fill', function (node) { return getNodeColor(node, neighbors) })
+  textElements.attr('fill', function (node) { return getTextColor(node, neighbors) })
+  linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
+}
 
 var linkElements = svg.append("g")
-    .attr("class", "links")
-    .selectAll("line")
-    .data(links)
-    .enter().append("line")
-        .attr("stroke-width", 1)
-        .attr("stroke", "rgba(50, 50, 50, 0.2)")
+  .attr("class", "links")
+  .selectAll("line")
+  .data(links)
+  .enter().append("line")
+    .attr("stroke-width", 1)
+	  .attr("stroke", "rgba(50, 50, 50, 0.2)")
 
 var nodeElements = svg.append("g")
-    .attr("class", "nodes")
-    .selectAll("circle")
-    .data(nodes)
-    .enter().append("circle")
-        .attr("r", 10)
-        .attr("fill", getNodeColor)
+  .attr("class", "nodes")
+  .selectAll("circle")
+  .data(nodes)
+  .enter().append("circle")
+    .attr("r", 10)
+    .attr("fill", getNodeColor)
+    .call(dragDrop)
+    .on('click', selectNode)
 
 var textElements = svg.append("g")
-    .attr("class", "texts")
-    .selectAll("text")
-    .data(nodes)
-    .enter().append("text")
-        .text(function (node) { return  node.label })
-        .attr("font-size", 15)
-        .attr("dx", 15)
-        .attr("dy", 4)
+  .attr("class", "texts")
+  .selectAll("text")
+  .data(nodes)
+  .enter().append("text")
+    .text(function (node) { return  node.label })
+	  .attr("font-size", 15)
+	  .attr("dx", 15)
+    .attr("dy", 4)
 
 simulation.nodes(nodes).on('tick', () => {
-    nodeElements
-        .attr('cx', function (node) { return node.x })
-        .attr('cy', function (node) { return node.y })
-    textElements
-        .attr('x', function (node) { return node.x })
-        .attr('y', function (node) { return node.y })
-    linkElements
-        .attr('x1', function (link) { return link.source.x })
-        .attr('y1', function (link) { return link.source.y })
-        .attr('x2', function (link) { return link.target.x })
-        .attr('y2', function (link) { return link.target.y })
+  nodeElements
+    .attr('cx', function (node) { return node.x })
+    .attr('cy', function (node) { return node.y })
+  textElements
+    .attr('x', function (node) { return node.x })
+    .attr('y', function (node) { return node.y })
+  linkElements
+    .attr('x1', function (link) { return link.source.x })
+    .attr('y1', function (link) { return link.source.y })
+    .attr('x2', function (link) { return link.target.x })
+    .attr('y2', function (link) { return link.target.y })
 })
 
 simulation.force("link").links(links)
