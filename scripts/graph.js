@@ -67,7 +67,7 @@ function getTextColor(node, neighbors) {
 var width = window.innerWidth
 var height = window.innerHeight
 
-var svg = d3.select('svg')
+var svg = d3.select('#graph')
 svg.attr('width', width).attr('height', height)
 
 // simulation setup with all forces
