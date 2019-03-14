@@ -1,8 +1,56 @@
-/* interaction */
-#story {
+html, body {
     width: 100%;
     height: 100%;
+    margin: 0;
+}
+
+/* interaction */
+.hide {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+#title-div {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-div-2 {
+    background-color:rgba(214, 229, 255, 0.9);
+    padding: 2%;
+    width: 50%;
+    height: 50%;
+}
+
+#title {
+    margin: auto;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#story {
+    /* width: 100%;
+    height: 100%; */
+    text-align: center;
+}
+
+#explanation {
+    font-family: 'Lato', sans-serif;
+    margin-top: 0;
+    padding: 2%;
+}
+
+#image {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 50%;
+    transform: translate(-50%,-50%);
 }
 /* line chart */
 .line {
@@ -21,6 +69,14 @@
     stroke: #fff;
 }
 
+/* graph */
+.node-tooltip {
+    border-radius: 3px;
+    padding: 3px;
+    font-family: 'Lato', sans-serif;
+}
+
+/* map */
 .states :hover {
     fill: #e5921f;
 }

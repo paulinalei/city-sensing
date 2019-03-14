@@ -17,8 +17,8 @@ lineData.sort(function(a,b){
     return new Date(b.date) - new Date(a.date);
 });
 
-var height = 300;
-var width = 700;
+var height = 110;
+var width = window.innerWidth - 20;
 
 var margin = {top: 10, right: 25, bottom: 25, left: 30};
 
