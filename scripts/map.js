@@ -1,11 +1,11 @@
 var height = 850;
 var width = 960;
-
 var margin = {top: 150, right: 25, bottom: 25, left: 30};
 
 width = width - margin.left - margin.right;
 height = height - margin.top - margin.bottom;
 
+var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 var projection = d3.geoAlbersUsa()
     .translate([width/2, height/2])    // translate to center of screen
     .scale([1000]);
@@ -14,8 +14,7 @@ active = d3.select(null);
 var svg = d3.select('#map')
     .attr('width',  width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
-    .append('g')
-    .attr('transform', "translate(" + margin.left + "," + margin.top + ")");
+    .append('g');
 
 
 d3.json("data-processing/us-states.json").then(function(us) {
@@ -23,7 +22,7 @@ d3.json("data-processing/us-states.json").then(function(us) {
     svg.append("rect")
         .attr("class", "background")
         .attr("width", width)
-        .attr("height", height)
+        .attr("height", 605)
         .attr("fill","white")
         .on("click", reset);
 
@@ -63,8 +62,21 @@ d3.json("data-processing/us-states.json").then(function(us) {
                         })
                         .attr("r", "3px")
                         .attr("fill", "#ff140a")
+                        .on("mousemove", function(d) {
+                            tooltip
+                                .style("left", d3.event.pageX - 20 + "px")
+                                .style("top", d3.event.pageY + 30 + "px")
+                                .style("display", "inline-block")
+                                .style("background", "rgba(255,255,255,0.5)")
+                                .html(d.body);
+                        })
+                        .on("mouseout", function(d) {
+                            tooltip.style("display", "none");
+                        })
                 }
             });
+
+
     }
 
     var tweetset;
@@ -75,22 +87,27 @@ d3.json("data-processing/us-states.json").then(function(us) {
         count = 0;
         tweets.sort(function(a,b){
             var dateA = new Date(a.postedTime), dateB = new Date(b.postedTime);
-            return dateA - dateB;
+            return dateB - dateA;
         });
         tweets.forEach(function(datum) {
 
             datum.lat = +datum.lat;
             datum.lon = +datum.lon;
-            // console.log(datum.comboTime);
 
         });
         drawMap(tweets);
+        // d3.select("body").append("svg")
+        //     .attr("width", 900)
+        //     .attr("height", 500)
+        //     .attr("id", "wordcloud")
+        //     .attr("transform", "translate(0,-750)")
+        //     .append("g")
+        //     .attr("transform", "translate(50,0)")
 
-        console.log("count: ", count);
+        // wordCloud(tweets);
         plotSlider();
     });
     function clicked(d) {
-        console.log("clicked");
         if (active.node() === this) return reset();
         active.classed("active", false);
         active = d3.select(this).classed("active", true);
@@ -156,7 +173,7 @@ d3.json("data-processing/us-states.json").then(function(us) {
 
     var slider = svg.append("g")
         .attr("class", "slider")
-        .attr("transform", "translate(" + 50 + "," + 750 + ")");
+        .attr("transform", "translate(" + 50 + "," + 650 + ")");
 
     slider.append("line")
         .attr("class", "track")
@@ -198,7 +215,7 @@ d3.json("data-processing/us-states.json").then(function(us) {
 
     var playbutton = svg.append("g")
         .attr("id", "playButton")
-        .attr("transform", "translate(" + 50 + "," + 800 + ")");
+        .attr("transform", "translate(" + 50 + "," + 700 + ")");
 
     playbutton.append("rect")
         .attr("id", "button")
@@ -245,7 +262,6 @@ d3.json("data-processing/us-states.json").then(function(us) {
                     timer = setInterval(step, 100);
                     d3.select("#btnText").text("Pause");
                 }
-                console.log("Slider moving: " + moving);
             })
 
 
@@ -258,12 +274,10 @@ d3.json("data-processing/us-states.json").then(function(us) {
             clearInterval(timer);
             // timer = 0;
             d3.select("#btnText").text("Play");
-            console.log("Slider moving: " + moving);
         }
     }
 
     function update(h) {
-        console.log(new Date(h));
         // update position and text of label according to slider scale
         handle.attr("cx", x(h));
         label
@@ -275,7 +289,52 @@ d3.json("data-processing/us-states.json").then(function(us) {
             var check = new Date(d.postedTime);
             return  check < h;
         })
+
         drawMap(newData);
+        //use wordcloud every 10 sets to avoid clustering.
+
+        if (newData.length > 10 && (newData.length+10) % 20 == 0){
+            wordCloud(newData);
+        }
     }
 }
+
+    function wordCloud(tweetBody){
+        var frequency_list =[];
+        text = "";
+        var length = tweetBody.length < 10 ? tweetBody.length : 10;
+        for(i = 0; i< length; i++){
+            text += tweetBody[i].body;
+        }
+        var innerArray = nlp(text).nouns().out('text');
+
+        var fq = nlp(innerArray).ngrams().unigrams().list
+        if(fq.length == 0)
+            return;
+
+        var length = fq.length < 10 ? fq.length : 10;
+        for(i = 0; i < length; i++){
+            frequency_list.push(fq[i].key)
+        }
+
+        d3.select("#map")
+            .selectAll("nothing")
+            .data(frequency_list)
+            .enter().append("text")
+            .attr("id", function(d, i){
+                return "cloud" + i;
+            })
+            .style("font-size", 40 )
+            .style("fill", "black")
+            .attr("transform", function(d, i) {
+                return "translate(-300, " + 40*(i+1) + ")";
+            })
+            .text(function(d, i) { return frequency_list[i]; })
+            .transition()
+            .duration(function(d,i){return 100*(Math.floor(Math.random()*70) +50);})
+            .attr("transform", function(d, i) {
+                return "translate(1200, " + 40*(i+1) + ")";
+            });
+
+    }
 });
