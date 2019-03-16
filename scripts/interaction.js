@@ -88,11 +88,11 @@ var stories = [
     },
     {
         'explanation': 'We see tweets corresponding to articles published after the hurricane.',
-        'image': './img/nytimes.png'
+        'image': './img/nytimesexample.png'
     },
     {
         'explanation': 'We see people worried and emotional over the hurricane.',
-        'image': './img/emotionexample.png'
+        'image': './img/emotion.png'
     },
     {
         'title': 'From our visualization, we see stories of people\'s lives appear and see how the hurricane affected them.'
