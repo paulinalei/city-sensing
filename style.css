@@ -131,3 +131,15 @@ html, body {
     stroke-opacity: 0.5;
     stroke-width: 1.25px;
 }
+.toolTip {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    min-width: 80px;
+    max-width: 250px;
+    height: auto;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    border:2px black;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
