@@ -67,8 +67,9 @@ d3.json("data-processing/us-states.json").then(function(us) {
                                 .style("left", d3.event.pageX - 20 + "px")
                                 .style("top", d3.event.pageY + 30 + "px")
                                 .style("display", "inline-block")
-                                .style("background", "rgba(255,255,255,0.5)")
-                                .html(d.body);
+                                .style("background", "rgba(0, 0, 0, 0.8)")
+                                .style("color", "white")
+                                .html("@" + d.preferredUsername + ": " + d.body);
                         })
                         .on("mouseout", function(d) {
                             tooltip.style("display", "none");
@@ -142,7 +143,7 @@ d3.json("data-processing/us-states.json").then(function(us) {
 
 
     function plotSlider(){
-    var formatDateIntoYear = d3.timeFormat("%Y/%m/%d");
+    var formatDateIntoYear = d3.timeFormat("%m/%d/%Y");
     var formatDate = d3.timeFormat("%H:00");
 
     var startDate = new Date("2012-10-25T00:00:00.000Z"),
@@ -201,6 +202,7 @@ d3.json("data-processing/us-states.json").then(function(us) {
         .attr("x", x)
         .attr("y", 10)
         .attr("text-anchor", "middle")
+        .attr("class", "map-dates")
         .text(function(d) { return formatDateIntoYear(d); });
 
     var handle = slider.insert("circle", ".track-overlay")
@@ -252,15 +254,15 @@ d3.json("data-processing/us-states.json").then(function(us) {
     playbutton
             .on("click", function() {
                 var button = d3.select(this);
-                if (d3.select("#btnText").text() == "Pause") {
+                if (d3.select("#btnText").text() == "PAUSE") {
                     moving = false;
                     clearInterval(timer);
                     // timer = 0;
-                    d3.select("#btnText").text("Play");
+                    d3.select("#btnText").text("PLAY");
                 } else {
                     moving = true;
                     timer = setInterval(step, 100);
-                    d3.select("#btnText").text("Pause");
+                    d3.select("#btnText").text("PAUSE");
                 }
             })
 
@@ -273,7 +275,7 @@ d3.json("data-processing/us-states.json").then(function(us) {
             currentValue = 0;
             clearInterval(timer);
             // timer = 0;
-            d3.select("#btnText").text("Play");
+            d3.select("#btnText").text("PLAY");
         }
     }
 
@@ -320,21 +322,23 @@ d3.json("data-processing/us-states.json").then(function(us) {
         d3.select("#map")
             .selectAll("nothing")
             .data(frequency_list)
-            .enter().append("text")
+            .enter()
+            .append("text")
+            .attr("class", "cloud-text")
+            .style("font-size", 40)
+            .style("fill", "black")
             .attr("id", function(d, i){
                 return "cloud" + i;
             })
-            .style("font-size", 40 )
-            .style("fill", "black")
             .attr("transform", function(d, i) {
                 return "translate(-300, " + 40*(i+1) + ")";
             })
-            .text(function(d, i) { return frequency_list[i]; })
             .transition()
-            .duration(function(d,i){return 100*(Math.floor(Math.random()*70) +50);})
+            .duration(function(d,i){return 200*(Math.floor(Math.random()*70) + 70);})
             .attr("transform", function(d, i) {
                 return "translate(1200, " + 40*(i+1) + ")";
-            });
+            })
+            .text(function(d, i) { return frequency_list[i]; });
 
     }
 });

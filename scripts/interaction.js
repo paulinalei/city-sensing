@@ -4,7 +4,7 @@ var stories = [
     },
     {
         'explanation': 'Emergency events happen across the globe. During these events, more and more people are using social media such as Twitter to post information about what is happening.',
-        'image': 'http://1.bp.blogspot.com/-waG3rYRs9Kg/T8_YfU0AcGI/AAAAAAAAGgg/lBsXlwHZ9r4/s1600/Twitter+logo+2011.png'
+        'image': './img/twitter.png'
     },
     {
         'title': 'Although we know that people use social media during these times, can we visualize how an event unfolds by tracking people\'s digital footprints?'
@@ -13,10 +13,20 @@ var stories = [
         'title': 'We decided to follow the CitySensing paper and extended it to visualize a nationwide event. The event we chose was Hurricane Sandy, which occurred from October 22, 2012 to November 2, 2012. We focused on the tweets that occurred in the United States during this time.'
     },
     { 
-        'explanation': 'We created a map view of the United States and plotted where the tweets came from using a dot.'
+        'explanation': 'We created a map view of the United States and plotted where the tweets came from using a dot.',
+        'image': './img/mapview.png'
     },
     {
-        'explanation': 'We have a slider to allow people to step through the different days when the hurricane was hitting the Northeastern part of the United States.'
+        'explanation': 'We have a slider to allow people to step through the different days when the hurricane was hitting the United States. Clicking "PLAY" will show an animation of tweets throughout the duration of the hurricane.',
+        'image': './img/mapview.png'
+    },
+    {
+        'explanation': 'Clicking into a state zooms into the state. Here we have zoomed into the state of New York.',
+        'image': './img/zoom.PNG'
+    },
+    {
+        'explanation': 'We used sentiment analysis to show the nouns that were used in the tweets.',
+        'image': './img/wordcloud.PNG'
     },
     {
         'explanation': 'We created this graph view showing which Twitter users used certain hashtags. Users are shown in gray while hashtags are shown in red.',
@@ -34,7 +44,61 @@ var stories = [
         'image': './img/windspeed.png'
     },
     {
-        'explanation': '(Insert story here, maybe show how tweets increase. Show a tweet showing wind speed and hashtag.)'
+        'explanation': 'We see as we step through time, more tweets begin to show, with a cluster forming in the Northeastern part of the United States, where the hurricane was hitting.',
+        'image': './img/map1.png'
+    },
+    {
+        'explanation': 'We see as we step through time, more tweets begin to show, with a cluster forming in the Northeastern part of the United States, where the hurricane was hitting.',
+        'image': './img/map2.png'
+    },
+    {
+        'explanation': 'We see as we step through time, more tweets begin to show, with a cluster forming in the Northeastern part of the United States, where the hurricane was hitting.',
+        'image': './img/map3.png'
+    },
+    {
+        'explanation': 'We see as we step through time, more tweets begin to show, with a cluster forming in the Northeastern part of the United States, where the hurricane was hitting.',
+        'image': './img/map4.png'
+    },
+    {
+        'explanation': 'We see as we step through time, more tweets begin to show, with a cluster forming in the Northeastern part of the United States, where the hurricane was hitting.',
+        'image': './img/map5.png'
+    },
+    {
+        'explanation': 'We see as we step through time, more tweets begin to show, with a cluster forming in the Northeastern part of the United States, where the hurricane was hitting.',
+        'image': './img/map6.png'
+    },
+    {
+        'explanation': 'We see as we step through time, more tweets begin to show, with a cluster forming in the Northeastern part of the United States, where the hurricane was hitting.',
+        'image': './img/map7.png'
+    },
+    {
+        'title': 'We see from the tweets, more tweets begin to appear from October 28, 2012, to October 29, 2012, the peak time of the hurricane.'
+    },
+    {
+        'explanation': 'This correlates well with the wind speeds, as we see that the peak wind speed was on October 29, 2012.',
+        'image': './img/windspeed.PNG'
+    },
+    {
+        'explanation': 'We even see tweets that reflect the danger of the hurricane during this time.',
+        'image': './img/mphexample.png'
+    },
+    {
+        'explanation': 'Here we see a tweet on October 30, 2012, detailing winds of the hurricane to be greater than 60 miles per hour, correlating well with the line graph of windspeed.',
+        'image': './img/mphexample.png'
+    },
+    {
+        'explanation': 'We see tweets corresponding to articles published after the hurricane.',
+        'image': './img/nytimes.png'
+    },
+    {
+        'explanation': 'We see people worried and emotional over the hurricane.',
+        'image': './img/emotionexample.png'
+    },
+    {
+        'title': 'From our visualization, we see stories of people\'s lives appear and see how the hurricane affected them.'
+    },
+    {
+        'title': 'Please explore our visualization on the next slide. </br> <font size=2>NOTE: Once you go to the next slide, you cannot come back to the storyline.</font>'
     }
 ]
 
@@ -65,8 +129,6 @@ function updateStory(storyNum, stories) {
 let storyNum = 0;
 updateStory(storyNum, stories);
 $(document).on('keydown', function(event) {
-    console.log(stories.length);
-    console.log(storyNum);
     if(event.keyCode == 37) {
         event.preventDefault();
         if (storyNum == stories.length) {

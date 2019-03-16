@@ -1,4 +1,4 @@
-var width = window.innerWidth/2;
+var width = window.innerWidth/2 - 20;
 var height = 500;
 
 var nodes = [
@@ -112,7 +112,7 @@ var linkElements = svg.append("g")
     .attr("stroke-width", 1)
     .attr("stroke", "rgba(50, 50, 50, 0.2)")
     
-var tooltip = d3.select("body")
+var graphtooltip = d3.select("body")
   .append("div")
   .attr("class", "node-tooltip")
   .style("position", "absolute")
@@ -132,14 +132,14 @@ var nodeElements = svg.append("g")
     .attr("fill", getNodeColor)
     .call(dragDrop)
     .on("click", selectNode)
-    .on("mouseover", function(node) {   
-      tooltip.style("visibility", "visible");
-      tooltip.html(node.label)
+    .on("mouseover", function(node) { 
+      graphtooltip.style("visibility", "visible");
+      graphtooltip.html(node.label)
         .style("left", (d3.event.pageX) + "px")
         .style("top", (d3.event.pageY) + "px");
     })
     .on("mouseout", function(d) {
-      tooltip.style("visibility", "hidden");
+      graphtooltip.style("visibility", "hidden");
     });
 
 // var textElements = svg.append("g")

@@ -4,14 +4,26 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <svg id="linechart"></svg>
-    <svg id="graph"></svg>
-    <svg id="map"></svg>
+    <div id="map-view">
+        <h2>CitySensing: Visualizing Tweets during Hurricane Sandy</h2>
+        <p class="caption">Geographical Location of Tweets during Hurricane Sandy</p>
+        <svg id="map"></svg>
+    </div>
+    <div id="graph-line-view">
+        <div id="line-view">
+            <p class="caption">Peak Wind Speeds in miles per hour</p>
+            <svg id="linechart"></svg>
+        </div>
+        <div id="graph-view">
+            <p class="caption">User and Hashtag Correlation</p>
+            <svg id="graph"></svg>
+        </div>
+    </div>
 </body>
 <script src="./lib/d3.min.js"></script>
 <script src="./scripts/graph.js"></script>
 <script src="./scripts/linechart.js"></script>
+<script src="./lib/topojson.v2.min.js"></script>
 <script src="./scripts/map.js"></script>
-<script src="https://d3js.org/topojson.v2.min.js"></script>
 <script src='./scripts/compromise.min.js'></script>
 

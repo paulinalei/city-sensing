@@ -37,20 +37,42 @@ html, body {
     /* width: 100%;
     height: 100%; */
     text-align: center;
+    z-index: 2;
 }
 
 #explanation {
     font-family: 'Lato', sans-serif;
     margin-top: 0;
     padding: 2%;
+    z-index: 2;
 }
 
 #image {
-    top: 50%;
+    top: 52%;
     left: 50%;
     position: absolute;
     width: 50%;
     transform: translate(-50%,-50%);
+}
+
+/* overall */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+#line-view {
+    float: left;
+}
+
+#graph-view {
+    float: right;
+}
+
+.caption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
 }
 /* line chart */
 .line {
@@ -69,6 +91,14 @@ html, body {
     stroke: #fff;
 }
 
+.tick {
+    font-family: 'Lato', sans-serif;
+}
+
+.label {
+    font-family: 'Lato', sans-serif;
+}
+
 /* graph */
 .node-tooltip {
     border-radius: 3px;
@@ -77,6 +107,10 @@ html, body {
 }
 
 /* map */
+#map {
+    display: block;
+    margin: 0 auto;
+}
 .states :hover {
     fill: #e5921f;
 }
@@ -138,8 +172,26 @@ html, body {
     min-width: 80px;
     max-width: 250px;
     height: auto;
-    background: rgb(255, 255, 255);
+    background: rgb(0, 0, 0, 0.9);
     text-align: center;
-    border:2px black;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    border: 2px black;
+    border-radius: 3px;
+    padding: 3px;
+    font-family: 'Lato', sans-serif;
+}
+
+.map-dates {
+    font-family: 'Lato', sans-serif;
+}
+
+.cloud-text {
+    font-family: 'Lato', sans-serif;
+}
+
+#playButton {
+    font-family: 'Lato', sans-serif;
+}
+
+#btnText {
+    text-align: center;
 }

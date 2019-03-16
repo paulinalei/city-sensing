@@ -17,10 +17,10 @@ lineData.sort(function(a,b){
     return new Date(b.date) - new Date(a.date);
 });
 
-var height = 110;
-var width = window.innerWidth - 20;
+var height = 500;
+var width = window.innerWidth/2 - 10;
 
-var margin = {top: 10, right: 25, bottom: 25, left: 30};
+var margin = {top: 10, right: 30, bottom: 25, left: 30};
 
 width = width - margin.left - margin.right;
 height = height - margin.top - margin.bottom;
