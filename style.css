@@ -52,7 +52,7 @@ html, body {
     left: 50%;
     position: absolute;
     width: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-40%);
 }
 
 /* overall */
